@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+'use strict';
 
 /**
  * @param {number} a
@@ -8,9 +8,9 @@
  */
 export function sum(a, b) {
     if (a === 0) {
-        return "";
+        return 10;
     }
-    return a + (b || 0);
+    return a + (b ?? 0);
 }
 
 sum(10);
