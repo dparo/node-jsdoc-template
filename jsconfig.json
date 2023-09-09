@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es2020",
+    "strict": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "resolveJsonModule": true,
+    "checkJs": true,
+    "allowJs": true,
+    "outDir": "build/dist",
+    "declarationDir": "build/dist/types",
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationMap": true,
+    "moduleResolution": "node16",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["node_modules", "dist", "build", "out"],
+  "include": ["src/**/*", "test/**/*"]
+}
