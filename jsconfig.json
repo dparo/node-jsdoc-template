@@ -14,11 +14,10 @@
     "outDir": "build/dist",
     "declarationDir": "build/dist/types",
     "noEmit": false,
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,
     "declaration": true,
     "declarationMap": true,
-    "moduleResolution": "node16",
-    "allowSyntheticDefaultImports": true
+    "moduleResolution": "node16"
   },
   "exclude": ["node_modules", "dist", "build", "out"],
   "include": ["src/**/*", "test/**/*"]
