@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+import { parseArgs } from 'node:util';
 
 /**
  * @param {number} a
@@ -13,5 +14,27 @@ export function sum(a, b) {
     return a + (b ?? 0);
 }
 
-sum(10);
-sum(10, 20);
+/** @type {import('node:util').ParseArgsConfig} */
+const config = {
+    options: {
+        foo: {
+            type: 'boolean',
+            short: 'f'
+        },
+        bar: {
+            type: 'string'
+        }
+    }
+};
+
+const args = parseArgs(config);
+main(args.values);
+
+/**
+ * @param {typeof args.values} args
+ */
+function main(args) {
+    console.log(args);
+    sum(10);
+    sum(10, 20);
+}
