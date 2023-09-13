@@ -14,8 +14,7 @@ export function sum(a, b) {
     return a + (b ?? 0);
 }
 
-/** @type {import('node:util').ParseArgsConfig} */
-const config = {
+const args = parseArgs({
     allowPositionals: true,
     options: {
         foo: {
@@ -27,9 +26,7 @@ const config = {
             type: 'string'
         }
     }
-};
-
-const args = parseArgs(config);
+});
 main(args);
 
 /**
