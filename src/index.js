@@ -16,10 +16,12 @@ export function sum(a, b) {
 
 /** @type {import('node:util').ParseArgsConfig} */
 const config = {
+    allowPositionals: true,
     options: {
         foo: {
             type: 'boolean',
-            short: 'f'
+            short: 'f',
+            default: false
         },
         bar: {
             type: 'string'
@@ -28,10 +30,10 @@ const config = {
 };
 
 const args = parseArgs(config);
-main(args.values);
+main(args);
 
 /**
- * @param {typeof args.values} args
+ * @param {typeof args} args
  */
 function main(args) {
     console.log(args);
