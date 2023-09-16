@@ -27,7 +27,6 @@ const args = parseArgs({
         }
     }
 });
-main(args);
 
 /**
  * @param {typeof args} args
@@ -36,4 +35,8 @@ function main(args) {
     console.log(args);
     sum(10);
     sum(10, 20);
+}
+
+if (require.main === module) {
+    main(args);
 }
